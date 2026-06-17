@@ -92,6 +92,12 @@ shipping *well*:
 - **A panel is input, not verdict.** Synthesise across opinions; say plainly when you disagree with
   all of them. Confident-in-chorus is still often wrong.
 - **Visual proof before the announce.** Show the change working on real prod, don't just claim it.
+- **Right channel for the load, and reviewer attention is the bottleneck.** An agent compresses months
+  of work into days, so the scarce resource is the human reviewer's attention, not the work. Put
+  substantive discussion, structured data, and full evidence on the durable threaded surface
+  (issues / PRs); the chat channel gets a concise, human-readable *summary* with a link, never a dense
+  wall. A glanceable summary plus visual proof (screenshot / GIF / short clip) conveys an outcome far
+  more cheaply than paragraphs. Don't fragment context across reply-threads that lose the original.
 - **No fabricated specifics.** A number, date, or quote needs a source, a test, or lived experience.
   Vague-but-true beats specific-but-invented.
 - **Test pass ≠ surface live.** A green test doesn't mean the change is reachable by a user; verify
