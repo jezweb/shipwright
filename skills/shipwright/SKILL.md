@@ -4,7 +4,7 @@ description: >
   The operating method for autonomous build-and-ship work. Load it when you're about to build,
   code, refactor, fix, review, or ship a web app or service, or when running a self-directed work
   loop, and you want to work the way the rest of the toolkit expects: the loop to run, which sibling
-  skill to reach for, how they chain, and the disciplines that keep the work honest. Not a router
+  skill to invoke, how they chain, and the disciplines that keep the work honest. Not a router
   (the harness already picks skills) and not a task tracker — the method an agent runs WHILE doing
   the work. Triggers with 'shipwright', 'how should I work on this', 'start building', 'work loop',
   'ship this', 'autonomous dev loop', 'what's the right way to build this'.
@@ -16,7 +16,7 @@ argument-hint: "[optional: the task or 'loop']"
 
 The shared operating method for an autonomous agent that builds and ships software. The harness
 already decides *which skill* fires; shipwright is the layer above that: the **loop you run**, the
-**moves you reach for and how they chain**, and the **judgement that keeps it honest**. It exists so
+**skills you invoke and how they chain**, and the **judgement that keeps it honest**. It exists so
 a fleet of agents across many machines ships the same way, and a new one inherits the whole method
 on day one instead of a pile of separate tools.
 
@@ -62,14 +62,18 @@ the interval per the cadence rule below.
 
 ## 2. The Move-set, and how the moves chain
 
-Each row below is an **installed sibling skill — invoke it by name** (the harness lists them; trigger
-the one that fits). First gate yourself, though: most questions you resolve by reading the code or
-picking the obvious default. Reach for a skill only when the task genuinely earns it — a panel for a
-trivial call, or a human decision you could've answered yourself, wastes more than it saves.
+Each row is an **installed sibling skill**. To use one, **invoke it by name** (`/decisions`,
+`/brainstrust`, and so on) so its full method loads, then follow it. The row is a one-line signpost,
+never the skill itself — improvising the skill's job from the row instead of loading it is the mistake
+this section exists to prevent.
 
-Reach for the sibling that fits the task shape. The **chain** matters more than the list:
+Gate yourself first. You answer most questions by reading the code or taking the obvious default.
+Invoke a skill only when the task earns it: a panel for a trivial call, or asking a human what you
+could look up, costs more than it saves.
 
-| When you need to… | Reach for | Notes |
+Match the skill to the task — the **chain** matters more than any single move:
+
+| To do this… | Invoke | Notes |
 |---|---|---|
 | get a **human's** decision | `decisions` | one clean ask, one tap; often fed by `brainstrust` |
 | **show a person a page** / get richer-than-a-tap input | `share` | a purpose-built web page on one link, structured answer back: compare options side by side, approve or edit a draft, mark up a mockup, fill a form. Sibling of `decisions` — `decisions` is one tap over chat, `share` is when the call needs a *surface* |
@@ -87,8 +91,8 @@ visual — two options to tap between, a mockup to mark up) puts it to the human
 moves — e.g. *read signals → pick a dependency security advisory → verify the fixed version is real and
 the bump isn't breaking → build → `verify`/`run` it works (and be honest if a test can't run locally) →
 ship the PR → breadcrumb*: no human, no panel, the disciplines alone carry the tick. A new agent can't
-infer either arc from the separate skill descriptions; that's why it lives here. Don't over-reach for
-moves a tick doesn't need.
+infer either arc from the separate skill descriptions; that's why it lives here. Don't invoke moves a
+tick doesn't need.
 
 ## 3. The Judgement layer (the disciplines)
 
