@@ -47,7 +47,10 @@ read the signals  →  pick the highest-value thing  →  branch
 ```
 
 - **Read the signals** before deciding: open work, new messages/issues, health of what's live, the
-  breadcrumb you left last tick.
+  breadcrumb you left last tick. And **re-read a thread or issue in the moment before you post into
+  it or act on it** — async means a human may have answered since your last scan. Acting on stale
+  state (e.g. posting a recommendation into a thread that was already decided) is the most common
+  avoidable miss, and a fresh scan costs seconds.
 - **Pick one thing, with a reason.** Highest value that's actually un-blocked. Don't stall, don't
   hedge into a survey of options, don't wait for steering you don't need.
 - **Branch, build, verify.** Small commits. Prove the change does what you claim (see disciplines).
