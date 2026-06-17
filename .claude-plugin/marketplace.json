@@ -1,0 +1,14 @@
+{
+  "name": "shipwright",
+  "owner": {
+    "name": "Jeremy Dawes",
+    "email": "jeremy@jezweb.net"
+  },
+  "plugins": [
+    {
+      "name": "shipwright",
+      "source": "./",
+      "description": "The operating method an autonomous agent runs while building and shipping: the work-loop, the map of which sibling skill to reach for and how they chain, and the disciplines that keep it honest. One doctrine, every device."
+    }
+  ]
+}
