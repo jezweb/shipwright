@@ -72,6 +72,7 @@ Reach for the sibling that fits the task shape. The **chain** matters more than 
 | When you need to… | Reach for | Notes |
 |---|---|---|
 | get a **human's** decision | `decisions` | one clean ask, one tap; often fed by `brainstrust` |
+| **show a person a page** / get richer-than-a-tap input | `share` | a purpose-built web page on one link, structured answer back: compare options side by side, approve or edit a draft, mark up a mockup, fill a form. Sibling of `decisions` — `decisions` is one tap over chat, `share` is when the call needs a *surface* |
 | get an **outside / other-model** read | `brainstrust` | its output is *input, not verdict* — verify before acting (the `brainstrust` skill, not the older `dev-tools:brains-trust`) |
 | **prove a change works / review before ship** | `verify` · `run` · `code-review` / `security-review` | the §1 "verify with proof" + "ship through gates" steps — don't hand-roll them |
 | **prove a bug is fixed** (before/after evidence) | `fixer` | closes what a review or panel opened |
@@ -80,7 +81,8 @@ Reach for the sibling that fits the task shape. The **chain** matters more than 
 | keep **driving the bar** over time | `perfection` | the *outer loop* that keeps calling the others |
 
 The arc, not the table, is the doctrine. The full version: *a `brainstrust` panel surfaces a concern →
-you verify its claims against the real code → a `decisions` ask puts the call to the human → you build →
+you verify its claims against the real code → a `decisions` ask (or a `share` page when the call needs a
+visual — two options to tap between, a mockup to mark up) puts it to the human → you build →
 `fixer` proves it's fixed → `perfection` keeps watch.* But most ticks are leaner and need no fancy
 moves — e.g. *read signals → pick a dependency security advisory → verify the fixed version is real and
 the bump isn't breaking → build → `verify`/`run` it works (and be honest if a test can't run locally) →

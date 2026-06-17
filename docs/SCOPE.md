@@ -75,6 +75,7 @@ Task-shape to the right sibling skill, and crucially *how they chain*:
 | When you need to… | Reach for | Chains with |
 |---|---|---|
 | get a **human's** call | `decisions` | often fed by `brainstrust` |
+| **show a person a page** / richer input | `share` | sibling of `decisions` — a page on a link when a tap won't do (compare, mark up, a form) |
 | get an **outside / other-model** read | `brainstrust` | feeds `decisions`; verify its output before acting |
 | **prove a bug is fixed** | `fixer` | closes what `brainstrust`/review opened |
 | check **comments/docs are true** | `honesty` | run before trusting a comment you'll act on |

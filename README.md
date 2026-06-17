@@ -21,8 +21,8 @@ the whole approach on day one instead of a pile of separate tools.
 1. **The Loop** — read signals → pick the highest-value thing → branch → build → verify with proof →
    ship through the gates → post → improve. Plus the cadence judgement: tighten on real signal, ease
    on quiet, never manufacture busywork.
-2. **The Move-set + chains** — which sibling to reach for (`decisions`, `brainstrust`, `fixer`,
-   `honesty`, `walkabout`, `perfection`) and, crucially, how they feed each other.
+2. **The Move-set + chains** — which sibling to reach for (`decisions`, `share`, `brainstrust`,
+   `fixer`, `honesty`, `walkabout`, `perfection`) and, crucially, how they feed each other.
 3. **The Judgement layer** — verify-before-assert, panel-is-input-not-verdict, visual-proof, no
    fabricated specifics, correct-in-the-open, and the deploy-time-only failure modes — referencing
    the rules rather than copying them.
@@ -34,6 +34,7 @@ See [`skills/shipwright/SKILL.md`](skills/shipwright/SKILL.md) for the doctrine 
 
 shipwright is the method; these are the moves it orchestrates:
 [`decisions`](https://github.com/jezweb/decisions) ·
+[`share`](https://github.com/jezweb/share) ·
 [`brainstrust`](https://github.com/jezweb/brainstrust) · `fixer` · `honesty` · `walkabout` ·
 `perfection`.
 
