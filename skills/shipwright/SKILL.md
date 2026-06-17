@@ -8,14 +8,6 @@ description: >
   (the harness already picks skills) and not a task tracker — the method an agent runs WHILE doing
   the work. Triggers with 'shipwright', 'how should I work on this', 'start building', 'work loop',
   'ship this', 'autonomous dev loop', 'what's the right way to build this'.
-triggers:
-  - shipwright
-  - how should I work on this
-  - start building
-  - run the work loop
-  - autonomous dev loop
-  - what's the right way to build this
-  - ship this properly
 user-invocable: true
 argument-hint: "[optional: the task or 'loop']"
 ---
