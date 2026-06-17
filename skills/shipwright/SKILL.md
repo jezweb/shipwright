@@ -57,6 +57,10 @@ read the signals  →  pick the highest-value thing  →  branch
 - **Ship through the gates.** Staging first; a behaviour change goes to the owner before prod.
 - **Post the outcome**, then leave a breadcrumb for the next tick.
 
+To run this as a recurring self-directed loop (not just once), schedule it with the `loop` skill
+(session-local) or `schedule` skill (cloud cron); each firing re-enters this method. Tighten or ease
+the interval per the cadence rule below.
+
 ### Cadence (the part that's usually only lived, not written)
 
 - **Tighten on real signal** (a reply, a new issue, a ship in flight). **Ease on sustained quiet.**
@@ -76,16 +80,21 @@ Reach for the sibling that fits the task shape. The **chain** matters more than 
 | When you need to… | Reach for | Notes |
 |---|---|---|
 | get a **human's** decision | `decisions` | one clean ask, one tap; often fed by `brainstrust` |
-| get an **outside / other-model** read | `brainstrust` | its output is *input, not verdict* — verify before acting |
-| **prove a bug is fixed** (before/after) | `fixer` | closes what a review or panel opened |
+| get an **outside / other-model** read | `brainstrust` | its output is *input, not verdict* — verify before acting (the `brainstrust` skill, not the older `dev-tools:brains-trust`) |
+| **prove a change works / review before ship** | `verify` · `run` · `code-review` / `security-review` | the §1 "verify with proof" + "ship through gates" steps — don't hand-roll them |
+| **prove a bug is fixed** (before/after evidence) | `fixer` | closes what a review or panel opened |
 | check **comments/docs match the code** | `honesty` | run before you trust a comment you'll act on |
 | **onboard / demo** the app | `walkabout` | guided tour, ask-the-app, demo videos |
 | keep **driving the bar** over time | `perfection` | the *outer loop* that keeps calling the others |
 
-The arc, not the table, is the doctrine: e.g. *a `brainstrust` panel surfaces a concern → you verify
-its claims against the real code → a `decisions` ask puts the call to the human → you build → `fixer`
-proves it's fixed → `perfection` keeps watch.* A new agent can't infer that arc from six separate
-descriptions; that's why it lives here.
+The arc, not the table, is the doctrine. The full version: *a `brainstrust` panel surfaces a concern →
+you verify its claims against the real code → a `decisions` ask puts the call to the human → you build →
+`fixer` proves it's fixed → `perfection` keeps watch.* But most ticks are leaner and need no fancy
+moves — e.g. *read signals → pick a dependency security advisory → verify the fixed version is real and
+the bump isn't breaking → build → `verify`/`run` it works (and be honest if a test can't run locally) →
+ship the PR → breadcrumb*: no human, no panel, the disciplines alone carry the tick. A new agent can't
+infer either arc from the separate skill descriptions; that's why it lives here. Don't over-reach for
+moves a tick doesn't need.
 
 ## 3. The Judgement layer (the disciplines)
 
