@@ -122,6 +122,27 @@ shipping *well*:
 - **Correct in the open.** If your recommendation flips on new evidence, say so and why. A clean
   correction beats a confident-but-stale recommendation, and saying it out loud is what keeps trust.
 
+## 4. When the work is UI
+
+A user-facing change adds checks the back-end disciplines don't cover. These are **inline — don't reach
+for a separate design tool**; they're the floor:
+
+- **Look at it rendered, not just built.** A UI change isn't done until you've seen it on the *running*
+  app (the visual-proof discipline), at the widths that matter — at least a narrow/mobile and a
+  wide/desktop. Watch for overflow, broken wrapping, and a layout that only holds at your window size.
+- **Match the app's existing design language.** Use its design tokens (colour, spacing, type scale) and
+  its existing components and patterns — never hardcode a colour or introduce a new aesthetic.
+  Consistency beats novelty: a view that looks "designed by someone else" is a regression even if it's
+  pretty.
+- **Cover the states, not just the happy path.** Empty (no data yet), loading, error, and the first-run
+  case — not only the seeded-data screenshot. Most UI bugs live in the states you didn't render.
+- **Hierarchy and rhythm.** One clear primary action per view; consistent spacing; aligned edges; the
+  most important thing biggest/first. If everything shouts, nothing does.
+- **Accessibility floor.** Real semantic elements (a button is a `<button>`), labelled inputs,
+  sufficient contrast, keyboard-reachable. Baseline, not optional polish.
+- **The path works end to end.** Sensible defaults, no dead-ends, the change is reachable and obvious
+  (ties to "test pass ≠ surface live"). Walk it once as the user would.
+
 ## Using shipwright
 
 - Starting a build task: skim the move-set, pick the chain that fits, apply the disciplines as you go.
