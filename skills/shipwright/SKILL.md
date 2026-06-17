@@ -66,6 +66,11 @@ read the signals  →  pick the highest-value thing  →  branch
 
 ## 2. The Move-set, and how the moves chain
 
+Each row below is an **installed sibling skill — invoke it by name** (the harness lists them; trigger
+the one that fits). First gate yourself, though: most questions you resolve by reading the code or
+picking the obvious default. Reach for a skill only when the task genuinely earns it — a panel for a
+trivial call, or a human decision you could've answered yourself, wastes more than it saves.
+
 Reach for the sibling that fits the task shape. The **chain** matters more than the list:
 
 | When you need to… | Reach for | Notes |
