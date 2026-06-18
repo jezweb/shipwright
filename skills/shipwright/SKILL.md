@@ -141,6 +141,34 @@ for a separate design tool**; they're the floor:
 - **The path works end to end.** Sensible defaults, no dead-ends, the change is reachable and obvious
   (ties to "test pass ≠ surface live"). Walk it once as the user would.
 
+## 5. Wiring check (run when you pick shipwright up in a repo)
+
+A skill auto-loads by its description — but an agent reads the project's `CLAUDE.md`
+(or `AGENTS.md`) *first*, and if that brief never mentions the toolkit, a fresh agent may
+never reach for it. So the first time you run shipwright in a repo — especially as the loop —
+verify the repo is wired:
+
+- **Does `CLAUDE.md` / `AGENTS.md` reference the `shipwright` method and the current sibling
+  set?** If it's missing, or has *drifted* (names a retired skill, or omits one that now
+  exists), **offer to add or update a short Operating-method block.** `CLAUDE.md` is
+  human-owned — propose the edit, don't make it silently.
+- **Are the siblings actually installed?** A pointer to a skill the repo can't load is a dead
+  end; flag any that aren't available.
+
+Running this check on *every* pickup is what stops the block from rotting: the wiring stays
+current because shipwright reconciles it each time, rather than every repo's `CLAUDE.md`
+drifting the moment the toolkit changes. (That self-heal is the whole point — it's what makes
+listing the skills safe.)
+
+Keep the block minimal: it **names** the skills for discoverability and **defers to this skill**
+for *what each does* and *how they chain* — single source, so §2 isn't re-documented (and
+re-staled) in every repo. The block to add:
+
+> **Operating method.** This repo follows the `shipwright` method. Load the `shipwright` skill
+> for the work-loop, the move-set, and when to reach for each sibling skill — `decisions`,
+> `share`, `brainstrust`, `fixer`, `honesty`, `walkabout`, `perfection`. shipwright holds what
+> each is for and how they chain; don't duplicate that here.
+
 ## Using shipwright
 
 - Starting a build task: skim the move-set, pick the chain that fits, apply the disciplines as you go.
