@@ -128,6 +128,17 @@ for a separate design tool**; they're the floor:
 - **Look at it rendered, not just built.** A UI change isn't done until you've seen it on the *running*
   app (the visual-proof discipline), at the widths that matter — at least a narrow/mobile and a
   wide/desktop. Watch for overflow, broken wrapping, and a layout that only holds at your window size.
+- **Assert on the accessibility tree, not the pixels.** Locate elements and check state via the a11y
+  tree (text, roles, a page snapshot) coupled to *user intent*, not DOM selectors — it survives
+  re-renders and reflects what the user actually gets. Reserve screenshots for what only human
+  perception catches: layout, spacing, colour encoding. Cheaper and more robust than screenshot-diffing.
+- **Make claims PASS/FAIL, and verify against intent — not aesthetics.** "The out-of-spec product's
+  badge renders red" is checkable; "looks right" isn't. Checking against the *spec* (not whether it's
+  pretty) is what catches the domain-correctness bugs code review misses — wrong data in a chart, an
+  inverted colour encoding, a palette that overflows the category count, a control that's unreachable.
+- **Verify by inspection, never by exit code.** Actually look at the rendered result — read the page
+  snapshot, or extract the frame and view it; a green build or a 200 is not proof the user sees the
+  right thing. Don't judge from a single state, either (see "cover the states").
 - **Match the app's existing design language.** Use its design tokens (colour, spacing, type scale) and
   its existing components and patterns — never hardcode a colour or introduce a new aesthetic.
   Consistency beats novelty: a view that looks "designed by someone else" is a regression even if it's
