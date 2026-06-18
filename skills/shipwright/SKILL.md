@@ -160,14 +160,28 @@ current because shipwright reconciles it each time, rather than every repo's `CL
 drifting the moment the toolkit changes. (That self-heal is the whole point — it's what makes
 listing the skills safe.)
 
-Keep the block minimal: it **names** the skills for discoverability and **defers to this skill**
-for *what each does* and *how they chain* — single source, so §2 isn't re-documented (and
-re-staled) in every repo. The block to add:
+Make the block **directive, not just a pointer**. A names-only list ("these skills exist, see
+shipwright") fixes *discovery* — an agent that didn't know the toolkit existed. But the more common
+failure is the **in-flow miss**: an agent that *knows* the skill exists still improvises past it in
+momentum (e.g. dumps a wall of questions at a person instead of invoking `decisions`). A pointer
+doesn't catch that; a **trigger → skill** mapping in the always-loaded brief has a chance to, because
+it fires at the decision point. So the block maps trigger → skill inline, and still defers to this
+skill for the *chains* and depth (single source). The per-pickup wiring-check keeps the trigger list
+current, so the inline list self-heals rather than rotting. The block to add:
 
-> **Operating method.** This repo follows the `shipwright` method. Load the `shipwright` skill
-> for the work-loop, the move-set, and when to reach for each sibling skill — `decisions`,
-> `share`, `brainstrust`, `fixer`, `honesty`, `walkabout`, `perfection`. shipwright holds what
-> each is for and how they chain; don't duplicate that here.
+> **Operating method — shipwright.** Build and ship via the `shipwright` skill (load it for the
+> loop + how the moves chain). **When one of these triggers comes up, invoke the named skill
+> instead of improvising its job** — invoking loads the skill's full method; the line here is the
+> trigger, not a substitute:
+> - about to ask a person a decision → `decisions` (one clean ask, never a wall of questions)
+> - want a page / richer-than-a-tap answer from a person → `share`
+> - want an outside / other-model read → `brainstrust` (its output is input, not verdict)
+> - proving a bug is fixed (before/after evidence) → `fixer`
+> - checking comments/docs actually match the code → `honesty`
+> - onboarding or demoing the app → `walkabout`
+> - keeping the quality bar driven over time → `perfection`
+
+(Adjust the list to the siblings actually installed — that's what the wiring-check reconciles.)
 
 ## Using shipwright
 
