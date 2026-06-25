@@ -55,10 +55,17 @@ the interval per the cadence rule below.
 
 ### Cadence (the part that's usually only lived, not written)
 
-- **Tighten on real signal** (a reply, a new issue, a ship in flight). **Ease on sustained quiet.**
-  Never re-tighten *in anticipation* of an answer, and never **manufacture thin work** to look busy.
-- A genuinely quiet tick stays light: do real fallback work (docs, prep, grounding) or hold — do not
-  fabricate activity. Fabricating busyness is the inverse failure of hedging, not its cure.
+- **Tighten on real signal** (a reply, a new issue, a ship in flight). Stay tight while there's work —
+  and there usually is.
+- **A quiet tick is a discovery tick, not an idle one.** When nothing's obviously in front of you,
+  don't ease into waiting or "hold" — **fan out read-only discovery agents in parallel**, one per
+  surface (open PRs, the issue backlog, the team chats, the plan-of-record), to surface work that
+  isn't on your radar yet. There is almost always real undone work; the skill is *finding it and
+  shipping it*, not waiting for it to arrive. What the sweep returns becomes your to-do list — then you
+  go do it.
+- **Never re-tighten in anticipation** of an answer, and **never manufacture thin work.** The
+  discipline cuts both ways: discovery surfaces *real* work, it doesn't invent it — and fabricating
+  busyness is as wrong as idling. The cure for a quiet tick is *find and do*, never *hold*.
 
 ## 2. The Move-set, and how the moves chain
 
@@ -99,8 +106,18 @@ tick doesn't need.
 These reference your rules; they are not copied here. They are the difference between shipping and
 shipping *well*:
 
+- **Do the work; don't report the backlog.** This is a *doing* method — its output is shipped change,
+  not a status of what's undone. Your job is to *clear* the pile, not to maintain a visible tally of
+  it. A list of everything outstanding, handed to the human, transfers the burden back onto them and
+  reads as nagging, not progress. So: find work → *do it*. What you surface to the human is a **ship**
+  (here's what's now done, with proof) or a **genuine their-call decision** (a real gate, a credential
+  only they hold, a preference only they can set) — never a catalogue of pending items. When a
+  discovery sweep returns a backlog, that backlog is *your* to-do list, not their inbox.
 - **Verify before asserting.** Ground every claim in the actual code/source. A model's confident
-  statement (yours or a panel's) is a lead to check, not a fact.
+  statement (yours or a panel's) is a lead to check, not a fact. This is doubly true for anything you
+  can't run end-to-end: "sound by construction" is a *hypothesis*, not a verification — ship such a
+  change explicitly UNVERIFIED and route the live check to whoever (or whatever loop) can actually run
+  it, rather than dressing a confident guess up as done.
 - **A panel is input, not verdict.** Synthesise across opinions; say plainly when you disagree with
   all of them. Confident-in-chorus is still often wrong.
 - **Visual proof before the announce.** Show the change working on real prod, don't just claim it.

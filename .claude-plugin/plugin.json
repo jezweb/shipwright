@@ -1,7 +1,7 @@
 {
   "name": "shipwright",
   "description": "The operating doctrine for autonomous build-and-ship work: the loop to run, which sibling skill to reach for and how they chain, and the disciplines that keep the work honest. Loaded when about to build/code/ship or run a self-directed work loop, so a fleet of agents ships the same way. Sits above fixer / perfection / walkabout / honesty / decisions / brainstrust — not a router, the method that runs while you use them.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Jeremy Dawes",
     "email": "jeremy@jezweb.net"
